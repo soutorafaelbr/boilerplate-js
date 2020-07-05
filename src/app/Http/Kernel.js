@@ -1,5 +1,5 @@
 import express from 'express'
-import router from './Routes/Routes'
+import router from '../../Routes/Routes'
 
 const kernel = express()
 
