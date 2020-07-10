@@ -19,7 +19,8 @@
     "mysql2": "^2.1.0",
     "sequelize": "^6.3.0",
     "sequelize-cli": "^6.1.0",
-    "sqlite3": "^5.0.0"
+    "sqlite3": "^5.0.0",
+    "supertest": "^4.0.2"
   },
   "devDependencies": {
     "babel-cli": "^6.26.0",
