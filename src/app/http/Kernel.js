@@ -8,8 +8,9 @@ import router from '../../routes/Routes'
 
 const kernel = express()
 
+kernel.use(express.json())
+
 kernel.use(router)
 
-kernel.use(express.json())
 
 export default kernel;
