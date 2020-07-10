@@ -9,5 +9,5 @@ module.exports = {
     database: process.env.DB_NAME,
     dialect: process.env.DB_DIALECT || 'mysql',
     operatorAliases: false,
-    storage: './tests/database.sqlite'
+    storage:'../../tests/database.sqlite'
 }
