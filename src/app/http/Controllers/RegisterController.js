@@ -1,16 +1,25 @@
 import { User } from '../../models'
 
 const store = async(req, res) => {
+    try {
+        const {name, email, password} = req.body
+    
+        const user = await User.create({
+            name,
+            email,
+            password
+        })
+        
 
-    const user = await User.create({
-        name: 'Rafael Souto',
-        email: 'souto.rafael@node.com',
-        password: '123456'
-    })
-    .catch((e) => console.log(e))
+        return res.status(201)
+        .send({
+            data: user
+        })
 
-    res.status(201).send({data: user})
-
+    } catch(error) {
+        return res.status(400)
+        .json({errors: error.message})
+    }
 }
 
 module.exports = {
